@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext {
+
+    // Android SDK versions
+    minSdkVersion = 15
+    targetSdkVersion = 23
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.2"
+
+    // Dependency versions
+    playServicesVersion = '8.4.0'
+    supportV4Version = '23.3.0'
+    appcompatV7Version = '23.3.0'
+    recyclerviewVersion = '23.3.0'
+    cardviewVersion = '23.3.0'
+    ormliteAndroidVersion = '5.0'
+    ormliteCoreVersion = '5.0'
+    gsonVersion = '2.2.4'
+    qbSdkVersion = '3.1.0'
+
+}
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
